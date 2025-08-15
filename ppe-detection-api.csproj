@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>ppe_detection_api</RootNamespace>
+    </PropertyGroup>
+
+<PropertyGroup>
+  <TargetFramework>net8.0</TargetFramework>
+  <Nullable>enable</Nullable>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+</PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+        <PackageReference Include="JWT" Version="11.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.19"/>
+        <PackageReference Include="MySql.Data" Version="9.4.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="swagger\v1\swagger.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="PPE\Repository\" />
+      <Folder Include="PPE\Service\" />
+      <Folder Include="Report\Controller\" />
+      <Folder Include="Report\Repository\" />
+      <Folder Include="Report\Service\" />
+    </ItemGroup>
+
+</Project>

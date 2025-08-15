@@ -1,0 +1,12 @@
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\ppe-detection-api.exe
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\appsettings.json
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\ppe-detection-api.dll
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\ppe-detection-api.deps.json
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\ppe-detection-api.runtimeconfig.json
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\ppe-detection-api.pdb
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\Microsoft.OpenApi.dll
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Release\net8.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

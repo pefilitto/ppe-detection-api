@@ -1,0 +1,6 @@
+@ppe_detection_api_HostAddress = http://localhost:5231
+
+GET {{ppe_detection_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

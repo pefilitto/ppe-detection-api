@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "E/Bfa6ZXBzDSlpWEPitTgZaVCoTHiccK5RG+Vv64D2Q=",
+  "Source": "ppe-detection-api",
+  "BasePath": "_content/ppe-detection-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
