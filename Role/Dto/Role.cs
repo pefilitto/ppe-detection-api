@@ -8,6 +8,5 @@ public class Role
     public Guid Id { get; set; }
     public string Name { get; set; }
     public HelmetColor HelmetColor { get; set; }
-    
-    //public List<PPE> RequiredPPEs { get; set; }
+    public List<RequiredPPEs> RequiredPPEs { get; set; }
 }

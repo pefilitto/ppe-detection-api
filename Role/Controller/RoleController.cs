@@ -22,6 +22,11 @@ public class RoleController : ControllerBase
             {
                 return BadRequest(new { Message = "Nome da profissão é obrigatório" });
             }
+            
+            if(role.RequiredPPEs.Count == 0)
+            {
+                return BadRequest(new { Message = "Pelo menos um EPI é necessário para a profissão" });
+            }
 
             _roleService.Register(role);
             

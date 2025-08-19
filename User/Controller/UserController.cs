@@ -41,8 +41,8 @@ public class UserController : ControllerBase
         try
         {
             dto.User user = _userService.GetUserById(id);
-            
-            if(user == null)
+
+            if (user == new dto.User())
             {
                 return NotFound(new { Message = "User not found" });
             }

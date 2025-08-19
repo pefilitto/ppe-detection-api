@@ -27,8 +27,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="PPE\Repository\" />
-      <Folder Include="PPE\Service\" />
       <Folder Include="Report\Controller\" />
       <Folder Include="Report\Repository\" />
       <Folder Include="Report\Service\" />

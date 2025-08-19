@@ -1,4 +1,5 @@
-﻿using ppe_detection_api.Context;
+﻿using MySql.Data.MySqlClient;
+using ppe_detection_api.Context;
 using ppe_detection_api.dto;
 
 namespace ppe_detection_api.User.Repository;
@@ -23,11 +24,11 @@ public class UserRepository
             using (var cmd = conn.CreateCommand())
             {
                 cmd.CommandText = "INSERT INTO users (Id, UserName, Name, Email, Password) VALUES (@Id, @UserName, @Name, @Email, @Password)";
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@Id", user.Id));
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@UserName", user.UserName));
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@Name", user.Name));
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@Email", user.Email));
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@Password", user.Password));
+                cmd.Parameters.Add(new MySqlParameter("@Id", Guid.NewGuid()));
+                cmd.Parameters.Add(new MySqlParameter("@UserName", user.UserName));
+                cmd.Parameters.Add(new MySqlParameter("@Name", user.Name));
+                cmd.Parameters.Add(new MySqlParameter("@Email", user.Email));
+                cmd.Parameters.Add(new MySqlParameter("@Password", user.Password));
 
                 cmd.ExecuteNonQuery();
             }
@@ -52,7 +53,7 @@ public class UserRepository
             using (var cmd = conn.CreateCommand())
             {
                 cmd.CommandText = "SELECT * FROM users WHERE Id = @Id";
-                cmd.Parameters.Add(new MySql.Data.MySqlClient.MySqlParameter("@Id", id));
+                cmd.Parameters.Add(new MySqlParameter("@Id", id));
                 
                 using (var reader = cmd.ExecuteReader())
                 {

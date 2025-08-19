@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ppe-detection-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+53fcce4f606bb0d0f238956d1e775e7a1112a8c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ppe-detection-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ppe-detection-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

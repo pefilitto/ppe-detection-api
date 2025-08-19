@@ -13,6 +13,23 @@ public class RoleService
 
     public void Register(Dto.Role role)
     {
-        _roleRepository.Register(role);
+        try
+        {
+            _roleRepository.BeginTransaction();
+               
+            Guid roleId = _roleRepository.Register(role);
+            
+            foreach(var ppe in role.RequiredPPEs)
+            {
+                _roleRepository.RegisterRequiredPPEs(roleId, ppe.PPE.Id);
+            }
+            
+            _roleRepository.Commit();
+        }
+        catch (Exception ex)
+        {
+            _roleRepository.RollBack();
+            throw ex;
+        }
     }
 }
