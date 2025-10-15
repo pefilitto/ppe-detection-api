@@ -15,21 +15,16 @@
 </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AWSSDK.S3" Version="4.0.6.8" />
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
         <PackageReference Include="JWT" Version="11.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.19"/>
         <PackageReference Include="MySql.Data" Version="9.4.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.1" />
     </ItemGroup>
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="swagger\v1\swagger.json" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Report\Controller\" />
-      <Folder Include="Report\Repository\" />
-      <Folder Include="Report\Service\" />
     </ItemGroup>
 
 </Project>
