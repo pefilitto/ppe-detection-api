@@ -1,4 +1,3 @@
-C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\appsettings.json
 C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\ppe-detection-api.exe
 C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\ppe-detection-api.deps.json
