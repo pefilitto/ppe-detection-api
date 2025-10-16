@@ -58,3 +58,6 @@ C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net
 C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\JWT.dll
 C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\obj\Debug\net8.0\ppe-detection-api.sourcelink.json
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\appsettings.Local.json
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\AWSSDK.Core.dll
+C:\Users\Pedro Filitto\Desktop\ppe-detection-api\ppe-detection-api\bin\Debug\net8.0\AWSSDK.S3.dll

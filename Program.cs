@@ -8,12 +8,12 @@ using ppe_detection_api.Role.Repository;
 using ppe_detection_api.Role.Service;
 using ppe_detection_api.S3;
 using ppe_detection_api.Common;
+using ppe_detection_api.Email;
 using Amazon.S3;
 using Amazon;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar carregamento de arquivos de configuração
 builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true)
@@ -23,6 +23,7 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerConfiguration();
 
 builder.Services.Configure<AwsSettings>(builder.Configuration.GetSection("AWS"));
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Email"));
 
 var awsSettings = builder.Configuration.GetSection("AWS").Get<AwsSettings>();
 builder.Services.AddSingleton<IAmazonS3>(provider =>
@@ -35,12 +36,14 @@ builder.Services.AddSingleton<IAmazonS3>(provider =>
 });
 
 builder.Services.AddScoped<DbContext>();
+
 builder.Services.AddScoped<ReportRepository>();
-builder.Services.AddScoped<ReportService>();
-builder.Services.AddScoped<S3Service>();
 builder.Services.AddScoped<PPERepository>();
-builder.Services.AddScoped<PPEService>();
 builder.Services.AddScoped<RoleRepository>();
+builder.Services.AddScoped<EmailService>();
+builder.Services.AddScoped<S3Service>();
+builder.Services.AddScoped<ReportService>();
+builder.Services.AddScoped<PPEService>();
 builder.Services.AddScoped<RoleService>();
 
 var app = builder.Build();
