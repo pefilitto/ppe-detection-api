@@ -33,7 +33,7 @@ public class ReportController : ControllerBase
                 string fileName = $"{id}.{Path.GetExtension(report.Image.FileName).TrimStart('.')}";
                 imageUrl = await _s3Service.UploadImageAsync(report.Image, fileName);
                 
-                await _emailService.SendViolationReportAsync(imageUrl, id.ToString());
+                await _emailService.SendViolationReportAsync(imageUrl, id.ToString(), report.Description);
             }
 
             return Ok(new {

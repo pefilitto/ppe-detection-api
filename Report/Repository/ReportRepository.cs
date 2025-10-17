@@ -22,10 +22,11 @@ public class ReportRepository
 
         using (var command = connection.CreateCommand())
         {
-            command.CommandText = "INSERT INTO report (id, date_begin, date_end) VALUES (@id, @date_begin, @date_end)";
+            command.CommandText = "INSERT INTO report (id, date_begin, date_end, description) VALUES (@id, @date_begin, @date_end, @description)";
             command.Parameters.Add(new MySqlParameter("@id", report.Id));
             command.Parameters.Add(new MySqlParameter("@date_begin", report.DateBegin));
             command.Parameters.Add(new MySqlParameter("@date_end", report.DateEnd));
+            command.Parameters.Add(new MySqlParameter("@description", report.Description));
             command.ExecuteNonQuery();
         }
         connection.Close();
@@ -43,7 +44,7 @@ public class ReportRepository
         
         using(var command = connection.CreateCommand())
         {
-            command.CommandText = "SELECT id, date_begin, date_end FROM report";
+            command.CommandText = "SELECT id, date_begin, date_end, description FROM report";
             
             using(var reader = command.ExecuteReader())
             {
@@ -54,6 +55,7 @@ public class ReportRepository
                         Id = reader.GetGuid(0),
                         DateBegin = reader.GetDateTime(1),
                         DateEnd = reader.GetDateTime(2),
+                        Description = reader.GetString(3)
                     };
                     
                     reports.Add(report);
