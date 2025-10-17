@@ -37,4 +37,18 @@ public class RoleController : ControllerBase
             return StatusCode(500, new { Message = "Erro interno do servidor: " + ex.Message });
         }
     }
+    
+    [HttpGet]
+    public IActionResult GetAllRoles()
+    {
+        try
+        {
+            var roles = _roleService.GetAllRoles();
+            return Ok(new { Roles = roles });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { Message = "Erro interno do servidor: " + ex.Message });
+        }
+    }
 }

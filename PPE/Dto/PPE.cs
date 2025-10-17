@@ -4,4 +4,5 @@ public class PPE
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
+    public int IdYolo { get; set; }
 }

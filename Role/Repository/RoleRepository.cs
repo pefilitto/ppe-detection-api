@@ -78,6 +78,50 @@ public class RoleRepository
         return role;
     }
     
+    public List<Dto.Role> GetAllRoles()
+    {
+        List<Dto.Role> roles = new List<Dto.Role>();
+        
+        OpenConnection();
+        
+        using(var command = _connection.CreateCommand())
+        {
+            command.CommandText = "select r.id, r.name as roleName, p.name as ppeName, p.Id, p.id_yolo from role r inner join role_required_ppes rp on rp.role_id = r.id inner join ppe p on p.id = rp.ppe_id";
+            
+            using(var reader = command.ExecuteReader())
+            {
+                while(reader.Read())
+                {
+                    Dto.Role role = new Dto.Role();
+                    
+                    role.Id = reader.GetGuid(0);
+                    role.Name = reader["roleName"].ToString();
+                    
+                    dto.PPE ppe = new dto.PPE
+                    {
+                        Id = reader.GetGuid(3),
+                        Name = reader["ppeName"].ToString(),
+                        IdYolo = Convert.ToInt32(reader["id_yolo"])
+                    };
+                    
+                    if(!roles.Exists(l => l.Id == role.Id))
+                    {
+                        roles.Add(role);
+                    }
+                    
+                    roles.Find(l => l.Id == role.Id).RequiredPPEs.Add(new RequiredPPEs
+                    {
+                        PPE = ppe
+                    });
+                }
+            }
+        }
+        
+        CloseConnection();
+
+        return roles;
+    }
+    
     public void BeginTransaction()
     {
         OpenConnection();

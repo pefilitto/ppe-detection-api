@@ -32,4 +32,9 @@ public class RoleService
             throw ex;
         }
     }
+    
+    public List<Dto.Role> GetAllRoles()
+    {
+        return _roleRepository.GetAllRoles();
+    }
 }

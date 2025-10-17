@@ -9,4 +9,9 @@ public class Role
     public string Name { get; set; }
     public HelmetColor HelmetColor { get; set; }
     public List<RequiredPPEs> RequiredPPEs { get; set; }
+    
+    public Role()
+    {
+        RequiredPPEs = new List<RequiredPPEs>();
+    }
 }
